@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* html {
+    font-size: 10px;
+  } */
+  .layout {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-rendering: optimizeSpeed;
+    padding: 2em;
+    background: linear-gradient(
+      90deg,
+      hsla(328, 75%, 45%, 1) 0%,
+      hsla(269, 85%, 41%, 1) 100%
+    );
+  
+    line-height: 1.4;
+    font-family: 'Work Sans', sans-serif;
+  }
+  
