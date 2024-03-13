@@ -157,7 +157,7 @@ const HomePage = () => {
                 const problemsByRating = {};
                 solvedProblems.forEach(submission => {
                     const rating = submission.problem.rating || 'Unrated';
-                    console.log(rating)
+                    // console.log(rating)
                     problemsByRating[rating] = (problemsByRating[rating] || 0) + 1;
                 });
 
@@ -187,7 +187,7 @@ const HomePage = () => {
         fetchProblemsByRating();
     }, [auth?.user]);
     useEffect(()=>{
-        console.log(problemsForces);
+        // console.log(problemsForces);
     },[problemsForces])
     return (
         <Layout scrollToForcesSection={scrollToForcesSection} scrollToLeetcodeSection={scrollToLeetcodeSection}>
