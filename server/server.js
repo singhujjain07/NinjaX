@@ -15,7 +15,10 @@ connectDB();
 const app = express();
 
 // middlewares
-app.use(cors())
+const corsOptions = {
+    origin: 'https://beamish-ganache-cbc9eb.netlify.app'
+};
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // routes
