@@ -24,7 +24,7 @@ const CodeforcesCard = ({ totalProblemsSolved }) => {
             try {
                 // const handle = 'singh_ujjain07'; // Replace with your Codeforces handle
 
-                const response = await axios.get('/server/v1/forces/user-info', { params: { handle } });
+                const response = await axios.get('https://ninjax.onrender.com/server/v1/forces/user-info', { params: { handle } });
                 setMaxRating(response?.data?.result[0].maxRating)
                 setRating(response?.data?.result[0].rating)
                 setRank(response?.data?.result[0].rank)

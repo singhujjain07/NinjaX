@@ -57,7 +57,7 @@ const ProfilePage = () => {
 
     const handleSave = async () => {
         try {
-            const { data } = await axios.put('/server/v1/auth/update-profile', { name: newName, email: newEmail, about: newAboutMe, cfid: newCfid,lcid: newLcid })
+            const { data } = await axios.put('https://ninjax.onrender.com/server/v1/auth/update-profile', { name: newName, email: newEmail, about: newAboutMe, cfid: newCfid,lcid: newLcid })
             if (data?.success) {
                 setAuth({...auth,user:data?.updatedUser})
                 let ls = localStorage.getItem("auth")

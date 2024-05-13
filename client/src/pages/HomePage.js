@@ -55,7 +55,7 @@ const HomePage = () => {
     const updateLcid = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.put("/server/v1/auth/update-lc",
+            const { data } = await axios.put("https://ninjax.onrender.com/server/v1/auth/update-lc",
                 { lcid }
             )
             if (data?.error) {
@@ -112,7 +112,7 @@ const HomePage = () => {
     const updateCfid = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.put("/server/v1/auth/update-cf",
+            const { data } = await axios.put("https://ninjax.onrender.com/server/v1/auth/update-cf",
                 { cfid }
             )
             if (data?.error) {
@@ -145,7 +145,7 @@ const HomePage = () => {
                     setCfidN(cfid);
                     handle = cfid
                 }
-                const response = await axios.get('/server/v1/forces/problems', { params: { handle } });
+                const response = await axios.get('https://ninjax.onrender.com/server/v1/forces/problems', { params: { handle } });
                 // Filter submissions by problems solved
                 const submissions = response?.data?.result
                 // ---------------------------problems-------------------------------

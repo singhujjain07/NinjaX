@@ -51,7 +51,7 @@ const Navbar = ({ userLang, setUserLang, userTheme,
                 return;
             }
             if (c) {
-                const { data } = await axios.put(`/server/v1/code/update-code/${c._id}`, { content: content });
+                const { data } = await axios.put(`https://ninjax.onrender.com/server/v1/code/update-code/${c._id}`, { content: content });
                 if (data?.success) {
                     toast.success(data?.message);
                     console.log(data?.newCode)
@@ -60,7 +60,7 @@ const Navbar = ({ userLang, setUserLang, userTheme,
                 }
                 return;
             }
-            const { data } = await axios.post('/server/v1/code/save-code', { owner: owner, name: filename, desc: desc, content: content })
+            const { data } = await axios.post('https://ninjax.onrender.com/server/v1/code/save-code', { owner: owner, name: filename, desc: desc, content: content })
             if (data?.success) {
                 toast.success(data?.message);
             } else {

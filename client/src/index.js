@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { AuthProvider } from './context/auth';
 import { ForcesProvider } from './context/forces';
 import { LcProvider } from './context/lc';
@@ -13,9 +14,9 @@ root.render(
   <AuthProvider>
     <ForcesProvider>
       <LcProvider>
-        <BrowserRouter>
+        <HashRouter>
           <App />
-        </BrowserRouter>
+        </HashRouter>
       </LcProvider>
     </ForcesProvider>
   </AuthProvider>

@@ -16,7 +16,7 @@ const app = express();
 
 // middlewares
 const corsOptions = {
-    origin: 'https://beamish-ganache-cbc9eb.netlify.app'
+    origin: 'ninjax.netlify.app'
 };
 app.use(cors(corsOptions))
 app.use(express.json())

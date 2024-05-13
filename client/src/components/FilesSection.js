@@ -13,7 +13,7 @@ const FilesSection = () => {
     }
     const getAllCodes = async () => {
         try {
-            const { data } = await axios.post(`/server/v1/code/fetch-code/${auth?.user?._id}`)
+            const { data } = await axios.post(`https://ninjax.onrender.com/server/v1/code/fetch-code/${auth?.user?._id}`)
             setAllCodes(data?.data);
         } catch (error) {
             console.log(error);
@@ -24,7 +24,7 @@ const FilesSection = () => {
         try {
             let answer = window.prompt('Do you want to delete this code?')
             if (!answer) return;
-            const { data } = await axios.delete(`/server/v1/code/delete-code/${id}`)
+            const { data } = await axios.delete(`https://ninjax.onrender.com/server/v1/code/delete-code/${id}`)
             toast.success('Code Deleted Successfully')
             getAllCodes();
         } catch (error) {

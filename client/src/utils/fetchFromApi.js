@@ -7,8 +7,8 @@ const options = {
     url: BASE_URL,
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': 'c981b75a76msh499a81f4d6afbb6p1fc349jsn0a5969d73e8e',
-      'X-RapidAPI-Host': 'online-code-compiler.p.rapidapi.com'
+      'X-RapidAPI-Key': process.env.REACT_APP_COMPILER_KEY,
+      'X-RapidAPI-Host': process.env.REACT_APP_COMPILER_HOST
     },
     data: {
       language: 'python3',

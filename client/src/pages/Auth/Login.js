@@ -15,7 +15,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("/server/v1/auth/login",
+            const res = await axios.post("https://ninjax.onrender.com/server/v1/auth/login",
                 { email, password }
             )
             if(res && res.data.success){

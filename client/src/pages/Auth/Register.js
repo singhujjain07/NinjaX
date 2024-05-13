@@ -17,7 +17,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post("/server/v1/auth/register",
+            const res = await axios.post("https://ninjax.onrender.com/server/v1/auth/register",
                 {name,email,password,cfid,lcid}
             )
             if(res.data.success){

@@ -26,7 +26,7 @@ const CodeforcesHeatmap = () => {
                     const { cfid } = auth.user;
                     handle = cfid
                 }
-                const response = await axios.get('/server/v1/forces/problems', { params: { handle } });
+                const response = await axios.get('https://ninjax.onrender.com/server/v1/forces/problems', { params: { handle } });
                 const submissions = response.data.result;
 
                 // Filter submissions to get only solved problems

@@ -15,7 +15,7 @@ const CodeforcesContestRatingGraph = () => {
           const { cfid } = auth.user;
           handle = cfid
         }
-        const response = await axios.get('/server/v1/forces/rating', { params: { handle } });
+        const response = await axios.get('https://ninjax.onrender.com/server/v1/forces/rating', { params: { handle } });
         const contests = response?.data?.result;
         // Extract contest dates and ratings
         const contestData = contests?.map(contest => ({
